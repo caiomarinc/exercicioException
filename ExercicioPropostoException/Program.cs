@@ -20,6 +20,7 @@ namespace ExercicioPropostoException
                 Console.Write("Withdraw Limit: ");
                 double accWithdrawLimit = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                 Console.WriteLine("");
+
                 Account account = new Account
                 {
                     Number = accNumber,
@@ -36,6 +37,14 @@ namespace ExercicioPropostoException
             catch (DomainException ex)
             {
                 Console.WriteLine("Withdraw Error: " + ex.Message);
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Error!: " + ex.Message);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Unexpected Error!");
             }
         }
     }
