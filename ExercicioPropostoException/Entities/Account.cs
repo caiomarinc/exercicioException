@@ -3,10 +3,10 @@
 namespace ExercicioPropostoException.Entities;
 internal class Account
 {
-    public int Number;
-    public string Holder;
-    public double Balance;
-    public double WithdrawLimit;
+    public int Number { get; set; }
+    public string Holder { get; set; }
+    public double Balance { get; set; }
+    public double WithdrawLimit { get; set; }
 
     public void Deposit(double amount)
     {
